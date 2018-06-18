@@ -8,6 +8,14 @@ public final class Phabulator {
     }
 
     public func run() throws {
-        print("Hello world")
+
+        let arc = try ArcConfig().read()
+
+        print(arc.hosts.first?.key)
+        print(arc.hosts.first?.value.token)
+
+
+
+
     }
 }
